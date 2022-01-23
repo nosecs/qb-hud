@@ -959,6 +959,7 @@ const vehHud = {
         console.log(root.style.getPropertyValue("--speedType"))
       } else {
         root.style.setProperty('--speedType', "KPH");
+        console.log(root.style.getPropertyValue("--speedType"))
       }
       
       if (data.seatbelt === true) {
