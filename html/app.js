@@ -943,7 +943,6 @@ const vehHud = {
   },
   methods: {
     vehicleHud(data) {
-      let root = document.documentElement;
       this.show = data.show;
       this.speed = data.speed;
       this.altitude = data.altitude;
@@ -954,7 +953,7 @@ const vehHud = {
       this.showCircleB = data.showCircleB;
       this.speedType = data.speedType
       console.log(!data.speedType)
-      document.getElementsByName("speed").toggleClass('selected', !this.speedType);
+      $(this).toggleClass('kph', !this.speedType);
       
       if (data.seatbelt === true) {
         this.seatbelt = 1;
