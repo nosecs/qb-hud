@@ -953,7 +953,7 @@ const vehHud = {
       this.showSquareB = data.showSquareB;
       this.showCircleB = data.showCircleB;
       this.speedType = data.speedType
-      console.log(toString(data.speedType))
+      console.log(data.speedType)
       if (data.speedType === true) {
         root.style.setProperty('--speedType', "MPH");
       } else {
