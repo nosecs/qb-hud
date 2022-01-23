@@ -943,6 +943,7 @@ const vehHud = {
   },
   methods: {
     vehicleHud(data) {
+      let root = document.documentElement;
       this.show = data.show;
       this.speed = data.speed;
       this.altitude = data.altitude;
@@ -952,7 +953,7 @@ const vehHud = {
       this.showSquareB = data.showSquareB;
       this.showCircleB = data.showCircleB;
       this.speedType = data.speedType
-      document.querySelector(':root').style.setProperty('--speedType', this.speedType);
+      root.style.setProperty('--speedType', this.speedType);
       if (data.seatbelt === true) {
         this.seatbelt = 1;
         this.seatbeltColor = "transparent";
