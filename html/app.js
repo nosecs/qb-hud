@@ -952,7 +952,7 @@ const vehHud = {
       this.showSquareB = data.showSquareB;
       this.showCircleB = data.showCircleB;
       this.speedType = data.speedType
-      r.style.setProperty('--speedType', this.speedType);
+      document.querySelector(':root').style.setProperty('--speedType', this.speedType);
       if (data.seatbelt === true) {
         this.seatbelt = 1;
         this.seatbeltColor = "transparent";
