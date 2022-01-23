@@ -955,11 +955,9 @@ const vehHud = {
       this.speedType = data.speedType
       console.log(data.speedType)
       if (data.speedType === true) {
-        root.style.setProperty('--speedType', "MPH");
-        console.log(root.style.getPropertyValue("--speedType"))
+        document.getElementsByName("speed").classList.remove = "kph";
       } else {
-        root.style.setProperty('--speedType', "KPH");
-        console.log(root.style.getPropertyValue("--speedType"))
+        document.getElementsByName("speed").className = "kph";
       }
       
       if (data.seatbelt === true) {
