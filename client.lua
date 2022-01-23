@@ -568,6 +568,9 @@ local function updateVehicleHud(data)
         if prevVehicleStats[k] ~= v then shouldUpdate = true break end
     end
     prevVehicleStats = data
+    if ShouldUseMetricMeasurements() then
+        data[8] = math.ceil(data[8]*1.60934)
+    end
     if shouldUpdate then
         SendNUIMessage({
             action = 'car',
