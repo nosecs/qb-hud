@@ -953,12 +953,8 @@ const vehHud = {
       this.showSquareB = data.showSquareB;
       this.showCircleB = data.showCircleB;
       this.speedType = data.speedType
-      console.log(data.speedType)
-      if (data.speedType === true) {
-        document.getElementsByName("speed").classList.remove = "kph";
-      } else {
-        document.getElementsByName("speed").className = "kph";
-      }
+      console.log(!data.speedType)
+      document.getElementsByName("speed").toggleClass('selected', !this.speedType);
       
       if (data.seatbelt === true) {
         this.seatbelt = 1;

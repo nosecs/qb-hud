@@ -121,12 +121,6 @@ speed:after {
 
 speed.kph:after {
   content: "KPH"; /* If using KPH change this content from MPH */
-  display: block;
-  padding-top: 3px;
-  padding-left: 2px;
-  padding-right: 2px;
-  padding-bottom: 8px;
-  font-weight: 900;
 }
 
 altitude:after {
