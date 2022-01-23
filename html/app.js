@@ -956,6 +956,7 @@ const vehHud = {
       console.log(data.speedType)
       if (data.speedType === true) {
         root.style.setProperty('--speedType', "MPH");
+        console.log(root.style.getPropertyValue("--speedType"))
       } else {
         root.style.setProperty('--speedType', "KPH");
       }
