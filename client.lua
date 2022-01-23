@@ -564,14 +564,14 @@ local prevVehicleStats = { nil, nil, nil, nil, nil, nil, nil, nil, nil, nil }
 
 local function updateVehicleHud(data)
     local shouldUpdate = false
-    local usesmph = "KPH"
+    local usesmph = true
     for k, v in pairs(data) do
         if prevVehicleStats[k] ~= v then shouldUpdate = true break end
     end
     prevVehicleStats = data
     if ShouldUseMetricMeasurements() then
         data[4] = math.ceil(data[4]*1.60934)
-        usesmph = "MPH"
+        usesmph = false
     end
     if shouldUpdate then
         SendNUIMessage({
