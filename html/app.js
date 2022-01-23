@@ -953,7 +953,7 @@ const vehHud = {
       this.showCircleB = data.showCircleB;
       this.speedType = data.speedType
       console.log(!data.speedType)
-      $(this).toggleClass('kph', !this.speedType);
+      $(this).toggleClass('kph', !data.speedType);
       
       if (data.seatbelt === true) {
         this.seatbelt = 1;
